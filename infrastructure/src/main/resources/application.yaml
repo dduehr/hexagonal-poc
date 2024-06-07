@@ -12,6 +12,9 @@ spring:
     url: jdbc:postgresql://localhost:5433/hexagonal-poc
     username: hexagonal-poc
     password: hexagonal-poc
+  jpa:
+    generate-ddl: true
+    show-sql: true
 
 springdoc:
   show-actuator: true

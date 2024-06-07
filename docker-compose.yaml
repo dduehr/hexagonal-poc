@@ -1,0 +1,15 @@
+services:
+  encore-measuring-db:
+    image: postgres:16.3
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_NAME=hexagonal-poc
+      - POSTGRES_USER=hexagonal-poc
+      - POSTGRES_PASSWORD=hexagonal-poc
+    volumes:
+      - hexagonal-poc-postgres-data:/var/lib/postgresql/data
+      - ./logs:/logs
+
+volumes:
+  hexagonal-poc-postgres-data:

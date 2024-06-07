@@ -1,0 +1,17 @@
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+      show-details: always
+
+spring:
+  application:
+    name: hexagonal-poc
+  datasource:
+    url: jdbc:postgresql://localhost:5433/hexagonal-poc
+    username: hexagonal-poc
+    password: hexagonal-poc
+
+springdoc:
+  show-actuator: true

@@ -9,4 +9,5 @@ interface Versions {
 
     // Dependencies
     String springDocVersion = "2.5.0"
+    String assertJVersion = "3.26.0"
 }

@@ -1,3 +1,8 @@
 rootProject.name = "hexagonal-poc"
 
-include("infrastructure")
+include("framework")
+
+arrayOf("adapter", "api", "application", "domain").forEach {
+    include(it)
+    project(":$it").projectDir = file("layers/$it")
+}

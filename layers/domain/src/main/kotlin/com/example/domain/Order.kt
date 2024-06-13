@@ -29,6 +29,8 @@ class NewOrder : Order()
 
 class PersistentOrder(val id: OrderId, items: List<PersistentOrderItem>) : Order(items.toMutableList()) {
 
+    val persistentItems: List<PersistentOrderItem> get() = items.filterIsInstance<PersistentOrderItem>()
+
     fun removeItemById(id: OrderItemId) {
         items.replaceAll { if (it is PersistentOrderItem && it.id == id) it.toDiscardedOrderItem() else it }
     }

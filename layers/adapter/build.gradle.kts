@@ -11,6 +11,6 @@ dependencies {
     implementation(project(":api"))
     implementation(project(":application"))
     implementation(project(":domain"))
-    runtimeOnly("org.postgresql:postgresql")
+    runtimeOnly("com.h2database:h2")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }

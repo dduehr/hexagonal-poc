@@ -2,7 +2,8 @@ rootProject.name = "hexagonal-poc"
 
 include("framework")
 
-arrayOf("adapter", "api", "application", "domain").forEach {
-    include(it)
-    project(":$it").projectDir = file("layers/$it")
+File(rootDir, "layers").listFiles()?.forEach {
+    val layer = it.name
+    include(layer)
+    project(":$layer").projectDir = file("layers/$layer")
 }

@@ -14,7 +14,7 @@ import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Component
 
 @Component
-class OrderDbAdapter(
+internal class OrderDbAdapter(
     private val orderDbRepository: OrderDbRepository,
     private val orderItemDbRepository: OrderItemDbRepository
 ) : OrderRepository {

@@ -9,7 +9,7 @@ import com.example.domain.PersistentOrderItem
 import com.example.domain.Price
 import com.example.domain.Quantity
 
-fun OrderItem.toDbEntity(): OrderItemDbEntity {
+internal fun OrderItem.toDbEntity(): OrderItemDbEntity {
     return when(this) {
         is NewOrderItem -> OrderItemDbEntity(name, price.value, quantity.value)
         is PersistentOrderItem -> OrderItemDbEntity(name, price.value, quantity.value, id.value)
@@ -18,4 +18,4 @@ fun OrderItem.toDbEntity(): OrderItemDbEntity {
     }
 }
 
-fun OrderItemDbEntity.toDomain() = PersistentOrderItem(OrderItemId(id), name, Price(price), Quantity(quantity))
+internal fun OrderItemDbEntity.toDomain() = PersistentOrderItem(OrderItemId(id), name, Price(price), Quantity(quantity))

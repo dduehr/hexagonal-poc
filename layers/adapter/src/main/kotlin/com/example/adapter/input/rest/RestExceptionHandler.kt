@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice
 import org.springframework.web.bind.annotation.ExceptionHandler
 
 @ControllerAdvice
-class RestExceptionHandler {
+internal class RestExceptionHandler {
     @ExceptionHandler(IllegalArgumentException::class)
     fun handleIllegalArgumentException(e: Exception): ResponseEntity<String> =
         ResponseEntity(e.localizedMessage, HttpStatus.BAD_REQUEST)

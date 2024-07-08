@@ -5,4 +5,4 @@ import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface OrderItemDbRepository : CrudRepository<OrderItemDbEntity, Long>
+internal interface OrderItemDbRepository : CrudRepository<OrderItemDbEntity, Long>

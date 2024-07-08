@@ -10,7 +10,7 @@ import java.math.BigDecimal
 
 @Entity
 @Table(name = "items")
-class OrderItemDbEntity (
+internal class OrderItemDbEntity (
     val name: String,
     val price: BigDecimal,
     val quantity: Int,

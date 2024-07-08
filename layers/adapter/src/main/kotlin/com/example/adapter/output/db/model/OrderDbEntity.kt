@@ -11,7 +11,7 @@ import jakarta.persistence.Table
 
 @Entity
 @Table(name = "orders")
-class OrderDbEntity (
+internal class OrderDbEntity (
     @OneToMany(cascade = [(CascadeType.ALL)])
     val items: MutableList<OrderItemDbEntity>,
     @Id @GeneratedValue(strategy = GenerationType.AUTO)

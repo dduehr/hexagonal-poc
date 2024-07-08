@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.server.ResponseStatusException
 
 @RestController
-class OrderRestController(
+internal class OrderRestController(
     private var createOrderUseCase: CreateOrderUseCase,
     private var findOrderByIdUseCase: FindOrderByIdUseCase
 ) {
